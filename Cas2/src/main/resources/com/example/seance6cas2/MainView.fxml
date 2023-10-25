@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+<?import javafx.scene.control.TextField?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="766.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.seance6cas2.MainController">
+   <children>
+      <TextField fx:id="nameRecetteTextField" onKeyTyped="#canPrintRecette" layoutX="119.0" layoutY="10.0" prefHeight="25.0" prefWidth="286.0" />
+      <Text layoutX="14.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nom de la recette" />
+      <Text layoutX="410.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Temps de préparation (min)" />
+      <Button id="printRecetteButton" fx:id="printRecetteButton" layoutX="654.0" layoutY="10.0" mnemonicParsing="false" onAction="#printRecette" text="Imprimer recette" />
+      <Text layoutX="14.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ingrédients :" />
+      <Text layoutX="175.0" layoutY="61.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Description étape :" />
+      <TextArea id="descriptionTextArea" fx:id="descriptionTextArea" layoutX="175.0" layoutY="75.0" prefHeight="127.0" prefWidth="365.0" />
+      <Button id="AddStepButton" fx:id="addStepButton" layoutX="551.0" layoutY="75.0" mnemonicParsing="false" prefHeight="127.0" onAction="#addStep" prefWidth="206.0" text="Ajouter étape" />
+      <ListView id="stepsListView" fx:id="stepsListView" layoutX="14.0" layoutY="208.0" prefHeight="161.0" prefWidth="744.0" />
+      <Text layoutX="14.0" layoutY="428.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Console :" />
+      <TextArea id="consoleTextArea" fx:id="consoleTextArea" editable="false" layoutX="14.0" layoutY="440.0" prefHeight="127.0" prefWidth="744.0" />
+      <TextField id="timeTextField" onKeyTyped="#canPrintRecette" fx:id="timeTextField" layoutX="568.0" layoutY="10.0" prefHeight="25.0" prefWidth="77.0" />
+      <ListView id="ingredientsListView" fx:id="ingredientsListView" layoutX="14.0" layoutY="73.0" prefHeight="127.0" prefWidth="147.0" />
+   </children>
+</AnchorPane>
